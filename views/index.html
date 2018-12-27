@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+   
+	<!--<link href="https://fs.com/favicon.ico" rel="shortcut icon">-->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_653626_9qi1j8lcdrysyvi.css" />
+</head>
+<body id="vue">
+<!--头部-->
+	<div>
+		
+	</div>
+	<!--jq-->
+<script  src="../js/utils/PublicJs/jquery.min.js" type="text/javascript"></script>
+<!--封装的ajax方法-->
+<script src="../js/utils/UrlRequest/api.js"></script>
+<!--api表单-->
+<script src="../js/utils/UrlRequest/request.js"></script>
+<!--需要用到的js方法-->
+<script src="../js/utils/filters/index.js"></script>
+<!--vue.js可局部使用-->
+ <script src="../js/utils/PublicJs/vue.min.js"></script>
+</body>
+	<script type="text/javascript">
+//jq调用方法
+//$(document).ready(function() {
+//
+//	banner({}, success=function(res){
+//		console.log(res,777)
+//	});
+//	dataAll({pageNum:1,pageSize:6}, success=function(res){
+//		console.log(res,666)
+//	})
+//
+//
+//});
+
+</script>
+ <script>
+ 	//vue调用方法
+
+      new Vue({
+          el:"#vue",
+          data:{
+						suid:44444,
+          
+          },
+          created:function(){
+          	var id = queryParam("p_id");
+          	console.log(id)
+          this.getCode()
+          },
+          methods:{
+          getCode:function(){
+	           banner({}, success=function(res){
+						console.log(res,777)
+						});
+						dataAll({pageNum:1,pageSize:6}, success=function(res){
+							console.log(res,666)
+						})
+      
+           },
+
+
+        }
+      });
+  </script> 
+  <!-- import Vue before Element -->
+  
+ 
+</html>
